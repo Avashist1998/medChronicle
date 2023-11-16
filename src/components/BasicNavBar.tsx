@@ -9,7 +9,7 @@ const BasicNavBar = (
   return (
     <Navbar expand="lg" className="bg-slate-300 shadow-md" >
       <Container className="py-[20px]">
-      <Navbar.Brand href="/">MedChronicle</Navbar.Brand>
+      <Navbar.Brand href="./">MedChronicle</Navbar.Brand>
       <Navbar.Toggle/>
       <Navbar.Collapse className="justify-end">
       <NavDropdown title="Products" id="basic-nav-dropdown" className="px-[40px]">

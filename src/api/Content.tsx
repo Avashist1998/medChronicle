@@ -36,10 +36,12 @@ type HomeContent = {
   description: string;
 }
 
-// ${process.env.PUBLIC_URL}
-
 const getHomeContent = async (): Promise<HomeContent> =>  {
-  const res = await window.fetch(`/content/home.json`);
+
+  // const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+  const url = "https://raw.githubusercontent.com/avashist1998/medChronicle/main/public/content/home.json";
+
+  const res = await window.fetch(url);
   if (!res.ok) {
       console.log("Error loading home content");
       console.log(res);
