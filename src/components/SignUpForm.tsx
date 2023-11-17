@@ -1,6 +1,5 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { Container } from "react-bootstrap";
 
 const SignUpForm = ( 
     props: {
@@ -8,7 +7,7 @@ const SignUpForm = (
     }
 ) => {
   return (
-    <Container className="bg-slate-200 rounded-xl">
+    <div className="bg-slate-200 rounded-xl">
         <div className="p-2 flex justify-end">
             <Button variant="danger" onClick={props.onHide}>Close</Button>
         </div>
@@ -39,7 +38,7 @@ const SignUpForm = (
             Submit
         </Button>
         </Form>
-    </Container>
+    </div>
 
   );
 };

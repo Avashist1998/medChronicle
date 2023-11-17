@@ -6,8 +6,9 @@ import SignUpForm from "./components/SignUpForm";
 
 import Content from "./views/Content";
 
-import "./App.css";
 import { HomeContent, getHomeContent } from "./api/Content";
+
+import "./App.css";
 
 function App() {
 
@@ -49,13 +50,13 @@ function App() {
       <div>
         <div className={signUp ? "pointer-events-none opacity-50" : "opacity-100"}>
           <BasicNavBar joinUs={joinUs}/>
-          <Content joinUs={joinUs} content={homeContent}/>
+          <Content joinUs={joinUs} homeContent={homeContent}/>
           <Footer/>
         </div>
         <div>
           { signUp &&
           <div className="fixed inset-0 flex items-center justify-center z-10">
-            <div className="bg-slate-300 p-2 rounded-xl shadow-lg w-[60%]">
+            <div className="bg-slate-300 p-2 rounded-xl shadow-lg w-[80%]">
               <SignUpForm onHide={hideSignUp} /> 
             </div>
           </div>
